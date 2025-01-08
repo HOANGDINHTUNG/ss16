@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 void inputString(char *str,int *n);
 void severseString(char *str,int *n);
 int main(){
@@ -19,7 +20,8 @@ void inputString(char *str,int *n){
 	}
 }
 void severseString(char *str,int *n){
-	for(int i=*n-1;i>=0;i--){
+	strrev(str);
+	for(int i=0;i<*n;i++){
 		printf("%c",*(str+i));
 	}
 }
